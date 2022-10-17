@@ -13,7 +13,7 @@ neutered,  and weight_kg
 */
 CREATE TABLE animals (
     id  INT,
-    name    VARCHAR(20),
+    name    TEXT,
     date_of_birth   DATE,
     escape_attempts INT,
     neutered    BOOLEAN,
