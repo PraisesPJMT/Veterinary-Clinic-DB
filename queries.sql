@@ -144,9 +144,9 @@ SELECT * FROM visits WHERE vet = 'William Tatcher'
 SELECT vet, COUNT(animal) FROM visits
     GROUP BY vet HAVING vet = 'Stephanie Mendez';
 
--- Query to list all vets and their specialties, including vets with no specialties
+-- Query to list all vets and their specializations, including vets with no specializations
 SELECT name, specie FROM vets
-    LEFT JOIN specialties ON vet = name;
+    LEFT JOIN specializations ON vet = name;
 
 -- Query to list all animals that visited Stephenie Mendez between April 1st and August 30th, 2020
 SELECT * FROM visits
@@ -173,7 +173,7 @@ SELECT animals.id AS "Animal ID", animals.name AS Animal, date_of_birth, escape_
 SELECT COUNT(*) AS "None Spec Visit Count" FROM visits
     WHERE visits.vet = (
         SELECT vets.name as VETS_NAME FROM vets
-        LEFT JOIN specialties ON specialties.vet = vets.name
+        LEFT JOIN specializations ON specializations.vet = vets.name
         WHERE specie IS NULL
     );
 

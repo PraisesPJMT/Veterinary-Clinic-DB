@@ -70,10 +70,10 @@ CREATE TABLE vets (
     PRIMARY KEY(id)
 );
 
-/* Creating 'specialties' table in 'vet_clinic' database
+/* Creating 'specializations' table in 'vet_clinic' database
    Table has columns: id, specie, and vet
 */
-CREATE TABLE specialties (
+CREATE TABLE specializations (
     id  BIGSERIAL  NOT NULL,
     vet TEXT,
     specie TEXT,

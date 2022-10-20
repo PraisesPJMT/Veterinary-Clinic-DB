@@ -50,10 +50,10 @@ INSERT INTO vets (name, age, date_of_graduation)
 VALUES  ('William Tatcher', 45, '2000-04-23'), ('Maisy Smith', 26, '2019-01-17'),
         ('Stephanie Mendez', 64, '1981-05-04'), ('Jack Harkness', 38, '2008-06-08');
 
-/* Inserting three(3) data into the 'specialties' table
+/* Inserting three(3) data into the 'specializations' table
    Each data having a specie, and vet
 */
-INSERT INTO specialties (vet, specie)
+INSERT INTO specializations (vet, specie)
 VALUES  ('William Tatcher', 'Pokemon'), ('Stephanie Mendez', 'Digimon'),
         ('Stephanie Mendez', 'Pokemon'), ('Jack Harkness', 'Digimon');
 
