@@ -51,23 +51,23 @@ VALUES  ('William Tatcher', 45, '2000-04-23'), ('Maisy Smith', 26, '2019-01-17')
         ('Stephanie Mendez', 64, '1981-05-04'), ('Jack Harkness', 38, '2008-06-08');
 
 /* Inserting three(3) data into the 'specializations' table
-   Each data having a specie, and vet
+   Each data having a vet_id, and species_id
 */
-INSERT INTO specializations (vet, specie)
-VALUES  ('William Tatcher', 'Pokemon'), ('Stephanie Mendez', 'Digimon'),
-        ('Stephanie Mendez', 'Pokemon'), ('Jack Harkness', 'Digimon');
+INSERT INTO specializations (vet_id, species_id)
+VALUES  (1, 1), (3, 2),
+        (3, 1), (4, 2);
 
 /* Inserting twenty(20) data into the 'visits' table
-   Each data having a animal, vet, and date_visited
+   Each data having a animal_id, vet_id, and date_visited
 */
-INSERT INTO visits (animal, vet, date_visited)
-VALUES  ('Boarmon', 'Maisy Smith', '2019-01-24'), ('Boarmon', 'Maisy Smith', '2019-05-15'),
-        ('Squirtle', 'Stephanie Mendez', '2019-09-29'), ('Plantmon', 'Maisy Smith', '2019-12-21'),
-        ('Pikachu', 'Maisy Smith', '2020-01-05'), ('Boarmon', 'Maisy Smith', '2020-02-27'),
-        ('Pikachu', 'Maisy Smith', '2020-03-08'), ('Pikachu', 'Maisy Smith', '2020-05-14'),
-        ('Agumon', 'William Tatcher', '2020-05-24'), ('Blossom', 'Stephanie Mendez', '2020-05-24'),
-        ('Agumon', 'Stephanie Mendez', '2020-07-22'), ('Boarmon', 'Maisy Smith', '2020-08-03'),
-        ('Plantmon', 'William Tatcher', '2020-08-10'), ('Angemon', 'Jack Harkness', '2020-10-03'),
-        ('Angemon', 'Jack Harkness', '2020-11-04'), ('Blossom', 'William Tatcher', '2021-01-11'),
-        ('Gabumon', 'Jack Harkness', '2021-02-02'), ('Charmander', 'Jack Harkness', '2021-02-24'),
-        ('Plantmon', 'Maisy Smith', '2021-04-07'), ('Devimon', 'Stephanie Mendez', '2021-05-04');
+INSERT INTO visits (animal_id, vet_id, date_visited)
+VALUES  (2, 2, '2019-01-24'), (2, 2, '2019-05-15'),
+        (1, 3, '2019-09-29'), (2, 2, '2019-12-21'),
+        (1, 2, '2020-01-05'), (2, 2, '2020-02-27'),
+        (1, 2, '2020-03-08'), (1, 2, '2020-05-14'),
+        (2, 1, '2020-05-24'), (1, 3, '2020-05-24'),
+        (2, 3, '2020-07-22'), (2, 2, '2020-08-03'),
+        (2, 1, '2020-08-10'), (2, 4, '2020-10-03'),
+        (2, 4, '2020-11-04'), (1, 1, '2021-01-11'),
+        (2, 4, '2021-02-02'), (1, 4, '2021-02-24'),
+        (2, 2, '2021-04-07'), (2, 3, '2021-05-04');
