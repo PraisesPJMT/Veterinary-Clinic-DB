@@ -42,3 +42,32 @@ UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name = 'Jennifer
 UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name = 'Bob') WHERE name IN ('Devimon', 'Plantmon');
 UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name = 'Melody Pond') WHERE name IN ('Charmander', 'Squirtle', 'Blossom');
 UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name = 'Dean Winchester') WHERE name IN ('Angemon', 'Boarmon');
+
+/* Inserting four(4) data into the 'vets' table
+   Each data having a name, age, and date_of_graduation
+*/
+INSERT INTO vets (name, age, date_of_graduation)
+VALUES  ('William Tatcher', 45, '2000-04-23'), ('Maisy Smith', 26, '2019-01-17'),
+        ('Stephanie Mendez', 64, '1981-05-04'), ('Jack Harkness', 38, '2008-06-08');
+
+/* Inserting three(3) data into the 'specializations' table
+   Each data having a vet_id, and species_id
+*/
+INSERT INTO specializations (vet_id, species_id)
+VALUES  (1, 1), (3, 2),
+        (3, 1), (4, 2);
+
+/* Inserting twenty(20) data into the 'visits' table
+   Each data having a animal_id, vet_id, and date_visited
+*/
+INSERT INTO visits (animal_id, vet_id, date_visited)
+VALUES  (2, 2, '2019-01-24'), (2, 2, '2019-05-15'),
+        (1, 3, '2019-09-29'), (2, 2, '2019-12-21'),
+        (1, 2, '2020-01-05'), (2, 2, '2020-02-27'),
+        (1, 2, '2020-03-08'), (1, 2, '2020-05-14'),
+        (2, 1, '2020-05-24'), (1, 3, '2020-05-24'),
+        (2, 3, '2020-07-22'), (2, 2, '2020-08-03'),
+        (2, 1, '2020-08-10'), (2, 4, '2020-10-03'),
+        (2, 4, '2020-11-04'), (1, 1, '2021-01-11'),
+        (2, 4, '2021-02-02'), (1, 4, '2021-02-24'),
+        (2, 2, '2021-04-07'), (2, 3, '2021-05-04');
