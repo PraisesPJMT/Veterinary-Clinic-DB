@@ -13,7 +13,7 @@ neutered,  and weight_kg
 */
 CREATE TABLE animals (
     id  INT,
-    name    TEXT,
+    name    VARCHAR(30),
     date_of_birth   DATE,
     escape_attempts INT,
     neutered    BOOLEAN,
@@ -22,14 +22,14 @@ CREATE TABLE animals (
 );
 
 -- Add a 'species' column with 'string' data type to 'animals' table
-ALTER TABLE animals ADD species TEXT;
+ALTER TABLE animals ADD species VARCHAR(30);
 
 /* Creating 'Owners' table in 'vet_clinic' database
    Table has columns: id, full_nam, and age
 */
 CREATE TABLE owners (
     id  BIGSERIAL  NOT NULL,
-    full_name   TEXT NOT NULL,
+    full_name   VARCHAR(30) NOT NULL,
     age INT NOT NULL,
     PRIMARY KEY(id)
 );
@@ -39,7 +39,7 @@ CREATE TABLE owners (
 */
 CREATE TABLE species (
     id  BIGSERIAL  NOT NULL,
-    name   TEXT NOT NULL,
+    name   VARCHAR(30) NOT NULL,
     PRIMARY KEY(id)
 );
 
@@ -64,7 +64,7 @@ ALTER TABLE animals ADD COLUMN owner_id INT references owners(id);
 */
 CREATE TABLE vets (
     id  BIGSERIAL  NOT NULL,
-    name   TEXT NOT NULL,
+    name   VARCHAR(30) NOT NULL,
     age INT,
     date_of_graduation DATE,
     PRIMARY KEY(id)
@@ -75,8 +75,8 @@ CREATE TABLE vets (
 */
 CREATE TABLE specializations (
     id  BIGSERIAL  NOT NULL,
-    vet TEXT,
-    specie TEXT,
+    vet VARCHAR(30),
+    specie VARCHAR(30),
     PRIMARY KEY(id)
 );
 
@@ -85,8 +85,8 @@ CREATE TABLE specializations (
 */
 CREATE TABLE visits (
     id  BIGSERIAL  NOT NULL,
-    animal TEXT,
-    vet TEXT,
+    animal VARCHAR(30),
+    vet VARCHAR(30),
     date_visited DATE,
     PRIMARY KEY(id)
 );
