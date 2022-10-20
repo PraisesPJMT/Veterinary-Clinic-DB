@@ -71,22 +71,18 @@ CREATE TABLE vets (
 );
 
 /* Creating 'specializations' table in 'vet_clinic' database
-   Table has columns: id, specie, and vet
+Table has columns: vet_id, and species_id
 */
 CREATE TABLE specializations (
-    id  BIGSERIAL  NOT NULL,
-    vet VARCHAR(30),
-    specie VARCHAR(30),
-    PRIMARY KEY(id)
+    vet_id INT REFERENCES vets(id),
+    species_id INT REFERENCES species(id)
 );
 
 /* Creating 'visits' table in 'vet_clinic' database
-   Table has columns: id, animal, vet, and date_of_visited
+Table has columns: animal_id, vet_id, and date_visited
 */
 CREATE TABLE visits (
-    id  BIGSERIAL  NOT NULL,
-    animal VARCHAR(30),
-    vet VARCHAR(30),
-    date_visited DATE,
-    PRIMARY KEY(id)
+    animal_id INT REFERENCES animals(id),
+    vet_id INT REFERENCES vets(id),
+    date_visited DATE
 );
