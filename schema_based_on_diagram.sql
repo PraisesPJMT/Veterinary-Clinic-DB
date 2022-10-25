@@ -80,7 +80,8 @@ CREATE TABLE invoice_items(
     invoice_id INT,
     treatment_id INT,
 
-    CONSTRAINT fk_invoice_id FOREIGN KEY(invoice_id) REFERENCES invoices(id)
+    CONSTRAINT fk_invoice_id FOREIGN KEY(invoice_id) REFERENCES invoices(id),
+    CONSTRAINT fk_treatment_id FOREIGN KEY(treatment_id) REFERENCES treatments(id)
 );
 -- create a non clustered index for invoice_id on invoice_items table
 CREATE INDEX invoice_items_invoice_id ON invoice_items(invoice_id);
