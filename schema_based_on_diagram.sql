@@ -27,6 +27,22 @@ CREATE TABLE medical_histories(
 -- create a non clustered index for patient_id on medical_histories table
 CREATE INDEX medical_histories_patient_id ON medical_histories(patient_id);
 
+/* Creating 'medical_histories_treatments' table in 'clinic' database
+   Table has columns: id, histories_id(As Foreign Key) and treatment_id(As Foreign Key)
+*/
+CREATE TABLE medical_histories_treatments(
+    id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    histories_id INT,
+    treatment_id INT,
+
+    CONSTRAINT fk_medical_history_id FOREIGN KEY(histories_id) REFERENCES medical_histories(id),
+    CONSTRAINT fk_medical_history_id FOREIGN KEY(treatment_id) REFERENCES treatments(id),
+);
+-- create a non clustered index for medical_histories_treatments_histories_id on medical_histories_treatments table
+CREATE INDEX medical_histories_treatments_histories_id ON medical_histories_treatments(histories_id);
+-- create a non clustered index for medical_histories_treatments_treatment_id on medical_histories_treatments table
+CREATE INDEX medical_histories_treatments_treatment_id ON medical_histories_treatments(treatment_id);
+
 /* Creating 'treatments' table in 'clinic' database
    Table has columns: id, type, and name
 */
