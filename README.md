@@ -7,7 +7,7 @@
 > - Clinic visits
 
 ## Database Diagram
-![Vet Clinic Database Diagram](https://drawsql.app/teams/praises/diagrams/vet-clinic/embed)
+![Vet Clinic Database Diagram](https://github.com/PraisesPJMT/Veterinary-Clinic-DB/blob/feat/db_diagram/vet_clinic_database.png?raw=true)
 
 ## Getting Started
 
