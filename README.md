@@ -6,6 +6,8 @@
 > - Clinic employees
 > - Clinic visits
 
+## Database Diagram
+![Vet Clinic Database Diagram](https://drawsql.app/teams/praises/diagrams/vet-clinic/embed)
 
 ## Getting Started
 
